@@ -1,4 +1,4 @@
-# Getting Started with Bajs App
+# Getting Started with Din mammas Cocktailbar
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
