@@ -1,5 +1,6 @@
 import './App.css';
 import ShowCocktails from './ShowCocktails'
+import ShowButtons from './ShowButtons'
 import 'bootstrap/dist/css/bootstrap.css';
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
         </header>
         <body>
             <ShowCocktails></ShowCocktails>
+            <ShowButtons></ShowButtons>
         </body>
         <footer className="pt-3 mt-4 text-muted border-top">
         EDAF90 - webprogrammering
