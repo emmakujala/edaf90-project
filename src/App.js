@@ -4,6 +4,7 @@ import ShowButtons from './ShowButtons'
 import 'bootstrap/dist/css/bootstrap.css';
 import ShowForm from './ShowForm';
 
+import ShowCocktails from './ShowCocktails';
 
 function App() {
     return (
