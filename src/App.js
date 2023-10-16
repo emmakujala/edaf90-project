@@ -2,6 +2,8 @@ import './App.css';
 import ShowCocktails from './ShowCocktails'
 import ShowButtons from './ShowButtons'
 import 'bootstrap/dist/css/bootstrap.css';
+import ShowForm from './ShowForm';
+
 
 function App() {
     return (
@@ -10,6 +12,7 @@ function App() {
           <span className="fs-4">DIN MAMMAS COCKTAILBAR</span>
         </header>
         <body>
+            <ShowForm></ShowForm>
             <ShowCocktails></ShowCocktails>
             <ShowButtons></ShowButtons>
         </body>
