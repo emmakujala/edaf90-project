@@ -1,5 +1,6 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
+import ShowCocktails from './ShowCocktails';
 
 function App() {
     return (
@@ -7,7 +8,10 @@ function App() {
         <header className="pb-3 mb-4 border-bottom">
           <span className="fs-4">DIN MAMMAS COCKTAILBAR</span>
         </header>
+        <body>
+      <ShowCocktails></ShowCocktails>
 
+        </body>
         <footer className="pt-3 mt-4 text-muted border-top">
         EDAF90 - webprogrammering
       </footer>
