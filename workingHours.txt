@@ -1,1 +1,3 @@
-palnering: 1-2 timmar
+Lägg till när ni jobbat:
+
+planering: 1-2 timmar
