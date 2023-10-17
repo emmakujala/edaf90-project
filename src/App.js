@@ -23,10 +23,6 @@ function App() {
             <Container>
             <ShowForm></ShowForm>
             </Container>
-            <Container>
-            <ShowButtons></ShowButtons>
-            </Container>
-          
           <ShowCocktails></ShowCocktails>
           </CocktailProvider>
            
