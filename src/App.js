@@ -16,13 +16,14 @@ function App() {
         </header>
         </Container>
         <body>
+        <CocktailProvider>
             <Container>
             <ShowForm></ShowForm>
             </Container>
             <Container>
             <ShowButtons></ShowButtons>
             </Container>
-          <CocktailProvider>
+          
           <ShowCocktails></ShowCocktails>
           </CocktailProvider>
            

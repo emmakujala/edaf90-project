@@ -10,10 +10,14 @@ export default function CocktailDetails() {
     const { selectedCocktail } = useCocktailContext();
 
 
-    console.log(selectedCocktail.strDrink);
+    //console.log(selectedCocktail.strDrink);
 
 
     useEffect(() => {
+
+        if (!selectedCocktail) {
+            return;
+        }
          
           async function fetchCocktailDetails() {
             try {
