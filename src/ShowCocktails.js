@@ -26,7 +26,7 @@ export default function ShowCocktails() {
                 }
                 
                 setCocktails(allCocktails);
-                //navigate('orders');
+                
                 
                  
             } catch (error) {
@@ -54,7 +54,7 @@ export default function ShowCocktails() {
 
         <div>
            <Outlet></Outlet>
-            <select value={selectedCocktail} onChange={(e) => show(e.target.value)}>
+            <select value={selectedCocktail} onChange={(e) => show(e.target.value)} className="btn btn-info dropdown-toggle" position="absolute">
             <option value=''>Choose a drink</option>
             {cocktails.map((cocktail, index) => (
                 <option value={cocktail.strDrink} key={index}>{cocktail.strDrink}</option>  
@@ -62,7 +62,6 @@ export default function ShowCocktails() {
             
             )}
             </select>
-        {/* <CocktailDetails selectedCocktail={selectedCocktail} /> */}
        
         </div>
     )

@@ -46,7 +46,7 @@ export default function CocktailDetails() {
       }
     
       return (
-        <div>
+        <div className="container py-4">
           <h2>{cocktailDetails.strDrink}</h2>
           <img src={cocktailDetails.strDrinkThumb} alt={cocktailDetails.strDrink} style={{ maxWidth: '200px' }} />
           <p>Category: {cocktailDetails.strCategory}</p>
