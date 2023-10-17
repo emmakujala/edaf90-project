@@ -2,7 +2,7 @@ import './App.css';
 import ShowCocktails from './ShowCocktails'
 import ShowButtons from './ShowButtons'
 import 'bootstrap/dist/css/bootstrap.css';
-import ShowCocktails from './ShowCocktails';
+import { CocktailProvider } from './CocktailProvider';
 
 function App() {
     return (
@@ -11,7 +11,10 @@ function App() {
           <span className="fs-4">DIN MAMMAS COCKTAILBAR</span>
         </header>
         <body>
-            <ShowCocktails></ShowCocktails>
+          <CocktailProvider>
+          <ShowCocktails></ShowCocktails>
+          </CocktailProvider>
+           
             <ShowButtons></ShowButtons>
         </body>
         <footer className="pt-3 mt-4 text-muted border-top">
