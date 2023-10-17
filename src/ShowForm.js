@@ -1,7 +1,7 @@
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import { useCocktailContext } from './CocktailProvider'
-import {useState, useEffect} from "react"
+import {useState} from "react"
 
 export default function ShowForm()  {
 
@@ -12,17 +12,11 @@ export default function ShowForm()  {
         console.log(event.target.value)
         event.preventDefault();
         setSelectedCocktail(searchTerm);
-        // if (searchTerm !== '') {
-        //     setSelectedCocktail(searchTerm);
-        // }
-        
-
-
     }
 
     return (
         
-        <Form  onChange={handleSubmit}>
+        <Form  onSubmit={handleSubmit}>
   
             <Form.Group>
                 <Form.Label>Sök efter cocktailrecept:</Form.Label>
