@@ -6,13 +6,16 @@ import { CocktailProvider } from './CocktailProvider';
 import ShowForm from './ShowForm';
 import Container from 'react-bootstrap/Container'
 import Header from './Header'
+import Image from 'react-bootstrap/Image'
 
 function App() {
     return (
       <div className="App">
         <Container>
         <header>
-          <Header></Header>
+        <Image src="bananacocktail (kopia).jpeg" fluid />
+          <Header>
+          </Header>
         </header>
         </Container>
         <body>
