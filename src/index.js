@@ -4,12 +4,15 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { RouterProvider } from 'react-router-dom';
 import router from './Router';
+import { CocktailProvider } from './CocktailProvider';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  <CocktailProvider>
   <React.StrictMode>
     <RouterProvider router={router} />
   </React.StrictMode>
+  </CocktailProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -2,19 +2,25 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import { useCocktailContext } from './CocktailProvider'
 import {useState} from "react"
+import { Outlet, useNavigate , Route, Routes} from 'react-router-dom';
+import CocktailDetails from './CocktailDetails';
 
-export default function ShowForm()  {
+export default function SearchBar()  {
 
     const [searchTerm, setSearchTerm] = useState('');
     const {setSelectedCocktail} = useCocktailContext();
+    const navigate = useNavigate();
 
     const handleSubmit = (event) => {
-        console.log(event.target.value)
+        console.log(searchTerm)
         event.preventDefault();
         setSelectedCocktail(searchTerm);
+        navigate('/search/details');
+        
     }
 
     return (
+        <div>
         
         <Form  onSubmit={handleSubmit}>
   
@@ -33,6 +39,10 @@ export default function ShowForm()  {
             </Button>
   
         </Form>
-
+        <Routes>
+            <Route path="details" element={<CocktailDetails />} />
+        </Routes>
+        <Outlet />
+        </div>
     )
 }
