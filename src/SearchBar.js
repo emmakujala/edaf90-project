@@ -8,13 +8,13 @@ import CocktailDetails from './CocktailDetails';
 export default function SearchBar()  {
 
     const [searchTerm, setSearchTerm] = useState('');
-    const {setSelectedCocktail} = useCocktailContext();
+    const {dispatch} = useCocktailContext();
     const navigate = useNavigate();
 
     const handleSubmit = (event) => {
         console.log(searchTerm)
         event.preventDefault();
-        setSelectedCocktail(searchTerm);
+        dispatch({ type: 'SET_SELECTED_COCKTAIL', payload: searchTerm })
         navigate('/search/details');
         
     }
