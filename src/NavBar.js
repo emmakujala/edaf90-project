@@ -8,7 +8,7 @@ function NavBar() {
     return (
       <Navbar expand="lg" bg="dark" className="bg-body-tertiary" data-bs-theme="dark">
       <Container>
-      <Navbar.Brand href="/nav">DIN MAMMAS COCKTAILBAR</Navbar.Brand>
+      <Navbar.Brand href="/">DIN MAMMAS COCKTAILBAR</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">

@@ -6,7 +6,6 @@ import Image from 'react-bootstrap/Image'
 import NavBar from './NavBar'
 import { Routes, Route } from 'react-router-dom';
 import SearchBar from './SearchBar';
-import CocktailDetails from './CocktailDetails';
 
 function App() {
   return (
@@ -16,8 +15,8 @@ function App() {
           <Image src="/bananacocktail (kopia).jpeg" fluid />
           <NavBar />
           <Routes>
-            <Route path="nav/list" element={<ShowCocktails />} />
-            <Route path="nav/search" element={<SearchBar />} />
+            <Route path="/list*" element={<ShowCocktails />} />
+            <Route path="/search*" element={<SearchBar />} />
           </Routes>
         </header>
       </Container>
