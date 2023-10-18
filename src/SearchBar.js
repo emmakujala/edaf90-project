@@ -2,7 +2,8 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import { useCocktailContext } from './CocktailProvider'
 import {useState} from "react"
-import { Outlet, useNavigate } from 'react-router-dom';
+import { Outlet, useNavigate , Route, Routes} from 'react-router-dom';
+import CocktailDetails from './CocktailDetails';
 
 export default function SearchBar()  {
 
@@ -11,16 +12,16 @@ export default function SearchBar()  {
     const navigate = useNavigate();
 
     const handleSubmit = (event) => {
-        console.log(event.target.value)
+        console.log(searchTerm)
         event.preventDefault();
         setSelectedCocktail(searchTerm);
-        //navigate('details');
+        navigate('/search/details');
         
     }
 
     return (
         <div>
-        <Outlet></Outlet>
+        
         <Form  onSubmit={handleSubmit}>
   
             <Form.Group>
@@ -38,6 +39,10 @@ export default function SearchBar()  {
             </Button>
   
         </Form>
+        <Routes>
+            <Route path="details" element={<CocktailDetails />} />
+        </Routes>
+        <Outlet />
         </div>
     )
 }

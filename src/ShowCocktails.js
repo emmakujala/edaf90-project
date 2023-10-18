@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import { Outlet, useNavigate } from "react-router-dom";
+import { Outlet, useNavigate, Route, Routes } from "react-router-dom";
 import { useCocktailContext } from './CocktailProvider';
+import CocktailDetails from "./CocktailDetails";
 
 export default function ShowCocktails() {
     const [cocktails, setCocktails] = useState([]);
@@ -41,7 +42,7 @@ export default function ShowCocktails() {
     const show = ((value) => {
         setSelectedCocktail(value);
         console.log(value);
-        //navigate('list/details');
+        navigate('/list/details');
 
 
     })
@@ -52,7 +53,7 @@ export default function ShowCocktails() {
     return (
 
         <div>
-           <Outlet></Outlet>
+          
             <select value={selectedCocktail} onChange={(e) => show(e.target.value)} className="btn btn-info dropdown-toggle" position="absolute">
             <option value=''>Choose a drink</option>
             {cocktails.map((cocktail, index) => (
@@ -61,7 +62,10 @@ export default function ShowCocktails() {
             
             )}
             </select>
-       
+            <Routes>
+            <Route path="details" element={<CocktailDetails />} />
+            </Routes>
+            <Outlet />
         </div>
     )
 

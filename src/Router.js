@@ -10,11 +10,10 @@ const router = createBrowserRouter([
 
     {
         element: <App/>,
-        path: '/',
             children: [
                 {
                     element: <NavBar />,
-                    path: 'nav',
+                    path: '/',
                     children: [
                         {
                             element: <ShowCocktails />,
@@ -37,7 +36,8 @@ const router = createBrowserRouter([
                             ]
                         }
                     ]
-                }
+                },
+                
                 
                     ]
 

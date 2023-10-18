@@ -10,10 +10,11 @@ import NavBar from './NavBar'
 import { Outlet } from 'react-router-dom';
 import { Routes, Route } from 'react-router-dom';
 import SearchBar from './SearchBar';
+import CocktailDetails from './CocktailDetails';
 
 function App() {
   return (
-    <div className="App">
+    <Container className="App">
       <Container>
         <header>
           <Image src="bananacocktail (kopia).jpeg" fluid />
@@ -21,11 +22,16 @@ function App() {
           </Header>
         </header>
       </Container>
-      <body>
+      
+      
         <NavBar />
+        
         <Routes>
-          <Route path="nav/list" element={<ShowCocktails />} />
-          <Route path="nav/search" element={<SearchBar />} />
+          
+          <Route path="list*" element={<ShowCocktails />} />
+          <Route path="search*" element={<SearchBar />} />
+       
+         
           {/* Other routes */}
         </Routes>
         {/* <Outlet></Outlet>
@@ -38,11 +44,11 @@ function App() {
 
 
 
-      </body>
+
       <footer className="pt-3 mt-4 text-muted border-top">
         EDAF90 - webprogrammering
       </footer>
-    </div>
+    </Container>
   )
 }
 
