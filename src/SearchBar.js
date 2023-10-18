@@ -14,7 +14,7 @@ export default function SearchBar()  {
         console.log(event.target.value)
         event.preventDefault();
         setSelectedCocktail(searchTerm);
-        navigate('details');
+        //navigate('details');
         
     }
 

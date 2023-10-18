@@ -24,8 +24,8 @@ function App() {
       <body>
         <NavBar />
         <Routes>
-          <Route path="nav" element={<ShowCocktails />} />
-          <Route path="nav" element={<SearchBar />} />
+          <Route path="nav/list" element={<ShowCocktails />} />
+          <Route path="nav/search" element={<SearchBar />} />
           {/* Other routes */}
         </Routes>
         {/* <Outlet></Outlet>
