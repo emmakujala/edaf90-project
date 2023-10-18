@@ -41,7 +41,7 @@ export default function ShowCocktails() {
     const show = ((value) => {
         setSelectedCocktail(value);
         console.log(value);
-        navigate('details');
+        navigate('list/details');
 
 
     })
