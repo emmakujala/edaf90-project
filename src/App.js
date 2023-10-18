@@ -6,6 +6,7 @@ import Image from 'react-bootstrap/Image'
 import NavBar from './NavBar'
 import { Routes, Route } from 'react-router-dom';
 import SearchBar from './SearchBar';
+import Footer from './Footer'
 
 function App() {
   return (
@@ -21,9 +22,7 @@ function App() {
         </header>
       </Container>
 
-      <footer className="pt-3 mt-4 text-muted border-top">
-        EDAF90 - webprogrammering
-      </footer>
+      <Footer></Footer>
     </Container>
   )
 }
