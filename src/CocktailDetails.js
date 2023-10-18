@@ -7,18 +7,18 @@ export default function CocktailDetails() {
     
     const url = 'http://www.thecocktaildb.com/api/json/v1/1/search.php?s='
     const [cocktailDetails, setCocktailDetails] = useState(null); 
-    const { selectedCocktail } = useCocktailContext();
+    const { state } = useCocktailContext();
 
 
     useEffect(() => {
 
-        if (!selectedCocktail) {
+        if (!state.selectedCocktail) {
             return;
         }
          
           async function fetchCocktailDetails() {
             try {
-              const response = await fetch(url + selectedCocktail);
+              const response = await fetch(url + state.selectedCocktail);
               const data = await response.json();
               setCocktailDetails(data.drinks[0]);  
               
@@ -30,7 +30,7 @@ export default function CocktailDetails() {
     
           fetchCocktailDetails();  
          
-    }, [selectedCocktail]);  
+    }, [state]);  
     
     if (!cocktailDetails) {
         return <span>No data available for the selected cocktail.</span>;  

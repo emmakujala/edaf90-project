@@ -15,8 +15,8 @@ function App() {
           <Image src="/bananacocktail (kopia).jpeg" fluid />
           <NavBar />
           <Routes>
-            <Route path="/list*" element={<ShowCocktails />} />
-            <Route path="/search*" element={<SearchBar />} />
+            <Route path="/list/*" element={<ShowCocktails />} />
+            <Route path="/search/*" element={<SearchBar />} />
           </Routes>
         </header>
       </Container>

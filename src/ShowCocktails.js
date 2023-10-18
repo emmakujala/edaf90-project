@@ -7,8 +7,9 @@ export default function ShowCocktails() {
     const [cocktails, setCocktails] = useState([]);
     const alphabet = 'abcdefghijklmnopqrstuvwxyz'
     const url = 'http://www.thecocktaildb.com/api/json/v1/1/search.php?f=';
-    const { selectedCocktail, setSelectedCocktail } = useCocktailContext();
+    const { state, dispatch } = useCocktailContext();
     const navigate = useNavigate();
+
 
     useEffect(() => {
 
@@ -39,9 +40,9 @@ export default function ShowCocktails() {
     }, [])
 
     
-    const show = ((value) => {
-        setSelectedCocktail(value);
-        console.log(value);
+    const show = ((newCocktail) => {
+       dispatch({ type: 'SET_SELECTED_COCKTAIL', payload: newCocktail })
+        
         navigate('/list/details');
 
 
@@ -54,7 +55,7 @@ export default function ShowCocktails() {
 
         <div>
           
-            <select value={selectedCocktail} onChange={(e) => show(e.target.value)} className="btn btn-info dropdown-toggle" position="absolute">
+            <select value={state.selectedCocktail} onChange={(e) => show(e.target.value)} className="btn btn-info dropdown-toggle" position="absolute">
             <option value=''>Choose a drink</option>
             {cocktails.map((cocktail, index) => (
                 <option value={cocktail.strDrink} key={index}>{cocktail.strDrink}</option>  
