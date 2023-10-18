@@ -12,6 +12,32 @@ const router = createBrowserRouter([
         element: <App/>,
         path: '/',
             children: [
+                {
+                    element: <NavBar />,
+                    path: 'nav',
+                    children: [
+                        {
+                            element: <ShowCocktails />,
+                            path: 'list',
+                            children: [
+                                {
+                                    element: <CocktailDetails />,
+                                    path: 'details'
+                                }
+                            ]
+                        }, 
+                        {
+                            element: <SearchBar />,
+                            path: 'search',
+                            children: [
+                                {
+                                    element: <CocktailDetails />,
+                                    path: 'details'   
+                                }
+                            ]
+                        }
+                    ]
+                }
                 
                     ]
 

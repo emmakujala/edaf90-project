@@ -14,8 +14,8 @@ function NavBar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="nav/search">Search</Nav.Link>
-            <Nav.Link href="nav/list">Look up</Nav.Link>
+            <Nav.Link href="search">Search</Nav.Link>
+            <Nav.Link href="list">Look up</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
