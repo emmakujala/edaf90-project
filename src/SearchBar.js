@@ -21,18 +21,15 @@ export default function SearchBar()  {
         
         <Form  onSubmit={handleSubmit}>
   
-            <Form.Group>
-                <Form.Label>Sök efter cocktailrecept:</Form.Label>
-                <Form.Control type="text" 
-                placeholder="sök..."
+            <Form.Group style = {{marginBottom: '14px'}}>
+                <Form.Label>Search for a cocktail recipe:</Form.Label>
+                <Form.Control type="text" style = {{ margin: '0 auto', maxWidth: '480px'}}
+                placeholder="Type here..."
                 onChange = {(e) => dispatch({type: 'SET_SELECTED_SEARCHTERM', payload: e.target.value})}
                 />
-                <Form.Text className="text-muted">
-                    Hoppas du hittar det du söker!
-                </Form.Text>
             </Form.Group>
  
-            <Button variant="secondary" type="submit" >Sök
+            <Button className="btn btn-warning text-white" variant="secondary" type="submit" >Search
             </Button>
   
         </Form>

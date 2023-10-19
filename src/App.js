@@ -21,10 +21,10 @@ function App() {
             <Route path="/search/*" element={<SearchBar />} />
             <Route path="/spirits/*" element={ <Spirits /> } />
             <Route path= "/random/*" element={<RandomCocktail />} />
-            <Route path = "/*" element = {<h1>Invalid url</h1>}/>
+            <Route path = "/*" element = {<h3>Pick a menu option!</h3>}/> 
           </Routes>
-          <div style = {{padding: '14px', position: 'relative'}}/>
-      <Footer></Footer>
+          <div style = {{padding: '14px', position: 'relative', marginBottom: '44px'}}/>
+      <Footer/>
     </Container>
   )
 }

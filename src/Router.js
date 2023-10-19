@@ -51,8 +51,7 @@ const router = createBrowserRouter([
                             ]
                         }, 
                         {
-                            path: '*', 
-                            element: <h1>Invalid url</h1>
+                            path: '*'
                         }
                     ]
                 },
