@@ -14,12 +14,13 @@ export default function SpiritButtons() {
     }
     return (
         <div>
-        <p>Find recipie based on a specific spirit:</p>
+        <h1>Get inspired!</h1>
+        <p style={{margin: '14px'}}>Find cocktails based on spirit</p>
 
-        <Button onClick={() => handleClick("Gin")}>Gin</Button> {'    '}
-        <Button onClick={() =>handleClick("Rum")}>Rum</Button> {'    '}
-        <Button onClick={() => handleClick("Tequila")}>Tequila</Button> {'    '}
-        <Button onClick={() => handleClick("Vodka")}>Vodka</Button> 
+        <Button style={{margin: '14px'}} className="btn btn-warning text-white" onClick={() => handleClick("Gin")}>Gin</Button> {'    '}
+        <Button style={{margin: '14px'}} className="btn btn-warning text-white" onClick={() =>handleClick("Rum")}>Rum</Button> {'    '}
+        <Button style={{margin: '14px'}} className="btn btn-warning text-white" onClick={() => handleClick("Tequila")}>Tequila</Button> {'    '}
+        <Button style={{margin: '14px'}} className="btn btn-warning text-white" onClick={() => handleClick("Vodka")}>Vodka</Button> 
 
         <Routes>
         <Route path='category' element={<Spirits />} />
