@@ -13,18 +13,17 @@ import RandomCocktail from './Random';
 function App() {
   return (
     <Container className="App">
-      <Container>
-        <header>
           <Image src="/bananacocktail (kopia).jpeg" fluid />
           <NavBar />
+          <div style = {{padding: '14px', position: 'relative'}}/>
           <Routes>
             <Route path="/list/*" element={<ShowCocktails />} />
             <Route path="/search/*" element={<SearchBar />} />
             <Route path="/spirits/*" element={ <Spirits /> } />
             <Route path= "/random/*" element={<RandomCocktail />} />
+            <Route path = "/*" element = {<h1>Invalid url</h1>}/>
           </Routes>
-        </header>
-      </Container>
+          <div style = {{padding: '14px', position: 'relative'}}/>
       <Footer></Footer>
     </Container>
   )
