@@ -62,7 +62,7 @@ export default function CocktailDetails() {
             ))}
           </ul>
           <h3>Instructions:</h3>
-          <p>{cocktailDetails.strInstructions}</p>
+          <p>{cocktailDetails.strInstructions}</p> 
         </div>
       );
 }
