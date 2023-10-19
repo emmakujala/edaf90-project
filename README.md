@@ -1,4 +1,4 @@
-# Getting Started with Karen's Cocktailbar
+# Getting Started with Karen's Cocktail bar
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
