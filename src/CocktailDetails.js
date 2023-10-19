@@ -1,4 +1,3 @@
-//import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import { useCocktailContext } from './CocktailProvider';
@@ -21,7 +20,6 @@ export default function CocktailDetails() {
               const response = await fetch(url + state.selectedCocktail);
               const data = await response.json();
               setCocktailDetails(data.drinks[0]);  
-              
             } catch (error) {
               console.error(error);
                
