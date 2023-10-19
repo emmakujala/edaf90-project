@@ -1,13 +1,13 @@
 import Button from "react-bootstrap/Button"
+import { useCocktailContext } from "./CocktailProvider"
 
 export default function Buttons() {
+    const {state, dispatch} = useCocktailContext();
 
     function handleClick(spirit) {
+       dispatch({type: 'SET_SELECTED_SPIRIT', payload: spirit})
         
-        const = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i='
-        return (
-            
-        )
+         
     }
     return (
         <div>

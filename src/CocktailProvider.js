@@ -1,5 +1,6 @@
   import React, { createContext, useContext, useReducer } from 'react';
 
+  
   const alphabet = 'abcdefghijklmnopqrstuvwxyz'
   const url = 'http://www.thecocktaildb.com/api/json/v1/1/search.php?f=';
 
@@ -9,6 +10,8 @@
           return { ...state, selectedCocktail: action.payload };
         case 'SET_SELECTED_SEARCHTERM':
           return {...state, searchTerm: action.payload};
+        case 'SET_SELECTED_SPIRIT':
+          return {...state, spiritCategory: action.payload};
         default:
           return state;
       }
@@ -51,7 +54,8 @@
     const initialState = {
       selectedCocktail: '',
       cocktailNames: parsedCocktailList(),
-      searchTerm: ''
+      searchTerm: '',
+      spiritCategory: ''
     };
 
     export const CocktailProvider = ({ children }) => {
