@@ -7,6 +7,8 @@
       switch (action.type) {
         case 'SET_SELECTED_COCKTAIL':
           return { ...state, selectedCocktail: action.payload };
+        case 'SET_SELECTED_SEARCHTERM':
+          return {...state, searchTerm: action.payload};
         default:
           return state;
       }
@@ -48,7 +50,8 @@
 
     const initialState = {
       selectedCocktail: '',
-      cocktailNames: parsedCocktailList()
+      cocktailNames: parsedCocktailList(),
+      searchTerm: ''
     };
 
     export const CocktailProvider = ({ children }) => {
