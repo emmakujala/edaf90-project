@@ -6,6 +6,7 @@ import NavBar from "./NavBar";
 import ShowCocktails from "./ShowCocktails";
 import SearchBar from "./SearchBar";
 import Spirits from "./Spirits"
+import RandomCocktail from "./Random";
 
 const router = createBrowserRouter([
 
@@ -39,6 +40,16 @@ const router = createBrowserRouter([
                         {
                             element: <Spirits />,
                             path: 'spirits',
+                        },
+                        {
+                            element: <RandomCocktail />,
+                            path: 'random',
+                            children: [
+                                {
+                                    element: <CocktailDetails/>,
+                                    path: 'details'
+                                }
+                            ]
                         }
                     ]
                 },

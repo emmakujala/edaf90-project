@@ -8,6 +8,7 @@ import { Routes, Route } from 'react-router-dom';
 import SearchBar from './SearchBar';
 import Footer from './Footer'
 import Spirits from './Spirits'
+import RandomCocktail from './Random';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="/list/*" element={<ShowCocktails />} />
             <Route path="/search/*" element={<SearchBar />} />
             <Route path="/spirits/*" element={ <Spirits /> } />
+            <Route path= "/random/*" element={<RandomCocktail />} />
           </Routes>
         </header>
       </Container>

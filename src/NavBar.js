@@ -15,6 +15,7 @@ function NavBar() {
             <Nav.Link href="/search">Search</Nav.Link>
             <Nav.Link href="/list">Look up</Nav.Link>
             <Nav.Link href="/spirits">Spirits</Nav.Link>
+            <Nav.Link href="/random">Random cocktail</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
