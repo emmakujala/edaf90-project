@@ -8,6 +8,7 @@ import { Routes, Route } from 'react-router-dom';
 import SearchBar from './SearchBar';
 import Footer from './Footer'
 import Spirits from './Spirits'
+import SpiritButtons from './SpiritButtons';
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
           <Routes>
             <Route path="/list/*" element={<ShowCocktails />} />
             <Route path="/search/*" element={<SearchBar />} />
-            <Route path="/spirits/*" element={ <Spirits /> } />
+            <Route path="/spirits/*" element={ <SpiritButtons /> } />
           </Routes>
         </header>
       </Container>

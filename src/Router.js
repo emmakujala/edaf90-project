@@ -6,6 +6,7 @@ import NavBar from "./NavBar";
 import ShowCocktails from "./ShowCocktails";
 import SearchBar from "./SearchBar";
 import Spirits from "./Spirits"
+import SpiritButtons from "./SpiritButtons";
 
 const router = createBrowserRouter([
 
@@ -37,8 +38,20 @@ const router = createBrowserRouter([
                             ]
                         },
                         {
-                            element: <Spirits />,
+                            element: <SpiritButtons />,
                             path: 'spirits',
+                            children: [
+                                {
+                                    element: <Spirits></Spirits>,
+                                    path: 'category',
+                                    children: [
+                                        {
+                                        element: <CocktailDetails />,
+                                        path: 'details'   
+                                    }
+                                    ]
+                                }
+                            ]
                         }
                     ]
                 },
