@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useEffect } from "react";
 import { useCocktailContext } from './CocktailProvider';
-import { useParams } from "react-router-dom";
 
 export default function CocktailDetails() {
 
