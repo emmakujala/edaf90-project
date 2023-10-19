@@ -45,11 +45,7 @@ export default function ShowCocktails() {
         
         navigate('/list/details');
 
-
     })
-
-    
-     
 
     return (
 
