@@ -39,7 +39,7 @@ export default function RandomCocktail() {
     return (
 
         <div>
-        <Button onClick={handleClick}>Randomise new cocktail</Button>
+        <Button className="btn btn-warning text-white" onClick={handleClick}>Randomise new cocktail</Button>
         <Routes>
             <Route path="details" element={<CocktailDetails />} />
             </Routes>
