@@ -1,6 +1,7 @@
 # Getting Started with Karen's Cocktail bar
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+To run this project, you need to install bootstrap ('npm install bootstrap').
 
 ## Available Scripts
 
