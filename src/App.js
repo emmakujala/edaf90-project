@@ -7,7 +7,6 @@ import NavBar from './NavBar'
 import { Routes, Route } from 'react-router-dom';
 import SearchBar from './SearchBar';
 import Footer from './Footer'
-import Spirits from './Spirits'
 import SpiritButtons from './SpiritButtons';
 import RandomCocktail from './Random';
 

@@ -1,13 +1,12 @@
 import { useState } from "react";
 import { useEffect } from "react";
 import { useCocktailContext } from './CocktailProvider';
-import { useParams } from "react-router-dom";
 
 export default function CocktailDetails() {
 
 
   const url = 'http://www.thecocktaildb.com/api/json/v1/1/search.php?s='
-  const [cocktailDetails, setCocktailDetails] = useState([]);
+  const [cocktailDetails, setCocktailDetails] = useState(null);
   const { state } = useCocktailContext();
 
 

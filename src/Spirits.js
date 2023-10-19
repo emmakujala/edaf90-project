@@ -4,28 +4,23 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
-import { Link, Outlet, useNavigate, Route, Routes } from "react-router-dom";
-import Pagination from 'react-bootstrap/Pagination';
+import { Outlet, Route, Routes } from "react-router-dom";
 import { useCocktailContext } from './CocktailProvider';
-import SpiritButtons from './SpiritButtons';
-import { Button } from 'react-bootstrap';
 import CocktailDetails from './CocktailDetails';
 
 export default function Spirits() {
 
     
     const [cocktails, setCocktails] = useState([]);
-    const { state, dispatch } = useCocktailContext();
+    const { state } = useCocktailContext();
     const url = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${state.spiritCategory}`;
-    const navigate = useNavigate();
+    
 
     useEffect(() => {
           async function fetchCocktails() {
             try {
               const response = await fetch(url);
               const data = await response.json();
-              console.log(response);
-              console.log(data);
               setCocktails(data.drinks);
             } catch (error) {
               console.error(error);
@@ -34,7 +29,7 @@ export default function Spirits() {
           }
           fetchCocktails();
         
-    },  [state])
+    })
      
 
 
