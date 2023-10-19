@@ -1,4 +1,3 @@
-//import React from "react";
 import { createBrowserRouter } from "react-router-dom";
 import App from './App';
 import CocktailDetails from "./CocktailDetails";
@@ -7,6 +6,7 @@ import ShowCocktails from "./ShowCocktails";
 import SearchBar from "./SearchBar";
 import Spirits from "./Spirits"
 import SpiritButtons from "./SpiritButtons";
+import RandomCocktail from "./Random";
 
 const router = createBrowserRouter([
 
@@ -52,10 +52,22 @@ const router = createBrowserRouter([
                                     ]
                                 }
                             ]
+                        },
+                        {
+                            element: <RandomCocktail />,
+                            path: 'random',
+                            children: [
+                                {
+                                    element: <CocktailDetails/>,
+                                    path: 'details'
+                                }
+                            ]
+                        }, 
+                        {
+                            path: '*'
                         }
                     ]
                 },
-                
                 
                     ]
 

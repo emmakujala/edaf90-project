@@ -1,5 +1,9 @@
 #FileLock
+<<<<<<< HEAD
 #Thu Oct 19 14:23:58 CEST 2023
+=======
+#Thu Oct 19 16:55:34 CEST 2023
+>>>>>>> main
 server=localhost\:63832
 hostName=localhost
 method=file

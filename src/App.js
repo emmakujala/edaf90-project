@@ -9,22 +9,23 @@ import SearchBar from './SearchBar';
 import Footer from './Footer'
 import Spirits from './Spirits'
 import SpiritButtons from './SpiritButtons';
+import RandomCocktail from './Random';
 
 function App() {
   return (
     <Container className="App">
-      <Container>
-        <header>
           <Image src="/bananacocktail (kopia).jpeg" fluid />
           <NavBar />
+          <div style = {{padding: '14px', position: 'relative'}}/>
           <Routes>
             <Route path="/list/*" element={<ShowCocktails />} />
             <Route path="/search/*" element={<SearchBar />} />
             <Route path="/spirits/*" element={ <SpiritButtons /> } />
+            <Route path= "/random/*" element={<RandomCocktail />} />
+            <Route path = "/*" element = {<h3>Pick a menu option!</h3>}/> 
           </Routes>
-        </header>
-      </Container>
-      <Footer></Footer>
+          <div style = {{padding: '14px', position: 'relative', marginBottom: '44px'}}/>
+      <Footer/>
     </Container>
   )
 }
