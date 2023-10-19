@@ -9,7 +9,7 @@
           return { ...state, selectedCocktail: action.payload };
         default:
           return state;
-      }useState
+      }
     };
 
     const CocktailContext = createContext();
