@@ -7,6 +7,7 @@ import NavBar from './NavBar'
 import { Routes, Route } from 'react-router-dom';
 import SearchBar from './SearchBar';
 import Footer from './Footer'
+import Spirits from './Spirits'
 
 function App() {
   return (
@@ -18,10 +19,10 @@ function App() {
           <Routes>
             <Route path="/list/*" element={<ShowCocktails />} />
             <Route path="/search/*" element={<SearchBar />} />
+            <Route path="/spirits/*" element={ <Spirits /> } />
           </Routes>
         </header>
       </Container>
-
       <Footer></Footer>
     </Container>
   )
