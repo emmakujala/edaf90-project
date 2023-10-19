@@ -21,7 +21,7 @@ function App() {
             <Route path="/search/*" element={<SearchBar />} />
             <Route path="/spirits/*" element={ <Spirits /> } />
             <Route path= "/random/*" element={<RandomCocktail />} />
-            <Route path = "/*" element = {<h1>Invalid url</h1>}/>
+            <Route path = "/*" element = {<h1>Pick an option!</h1>}/>
           </Routes>
           <div style = {{padding: '14px', position: 'relative'}}/>
       <Footer></Footer>

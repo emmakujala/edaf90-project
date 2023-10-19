@@ -17,7 +17,7 @@ export default function ShowCocktails() {
 
         <div>
           
-            <select value={state.selectedCocktail} onChange={(e) => show(e.target.value)} className="btn btn-info dropdown-toggle" position="absolute">
+            <select value={state.selectedCocktail} onChange={(e) => show(e.target.value)} className="btn btn-warning dropdown-toggle text-white" position="absolute">
             <option value=''>Choose a drink</option>
             {state.cocktailNames.map((cocktail, index) => (
                 <option value={cocktail} key={index}>{cocktail}</option>  
