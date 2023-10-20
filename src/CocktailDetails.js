@@ -50,7 +50,7 @@ export default function CocktailDetails() {
 
   return (
 
-    <div className="border border-warning rounded" style={{ padding: '24px', margin: '24px auto', position: 'relative', maxWidth: '500px' }}>
+    <div className="border border-warning rounded" style={{ padding: '24px', margin: '24px auto', marginBottom: '84px', position: 'relative', maxWidth: '500px' }}>
       <h2>{cocktailDetails.strDrink}</h2>
       <img src={cocktailDetails.strDrinkThumb} className="rounded" alt={cocktailDetails.strDrink} style={{ margin: '14px', maxWidth: '200px' }} />
       <p><b>Category:</b> {cocktailDetails.strCategory}</p>
