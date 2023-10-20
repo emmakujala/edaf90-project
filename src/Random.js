@@ -6,7 +6,7 @@ import CocktailDetails from "./CocktailDetails";
 
 export default function RandomCocktail() {
 
-    const {state, dispatch} = useCocktailContext();
+    const {dispatch} = useCocktailContext();
     const url = 'http://www.thecocktaildb.com/api/json/v1/1/random.php';
     const navigate = useNavigate();
 

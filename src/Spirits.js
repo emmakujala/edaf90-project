@@ -14,14 +14,13 @@ export default function Spirits() {
     const [cocktails, setCocktails] = useState([]);
     const { state } = useCocktailContext();
     const url = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${state.spiritCategory}`;
+    
 
     useEffect(() => {
           async function fetchCocktails() {
             try {
               const response = await fetch(url);
               const data = await response.json();
-              console.log(response);
-              console.log(data);
               setCocktails(data.drinks);
             } catch (error) {
               console.error(error);
@@ -30,7 +29,7 @@ export default function Spirits() {
           }
           fetchCocktails();
         
-    },[state])
+    })
      
 
 

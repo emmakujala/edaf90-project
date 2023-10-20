@@ -4,7 +4,7 @@ import { Outlet, Routes, Route, useNavigate } from "react-router-dom";
 import Spirits from "./Spirits";
 
 export default function SpiritButtons() {
-    const {state, dispatch} = useCocktailContext();
+    const { dispatch } = useCocktailContext();
     const navigate = useNavigate();
 
     function handleClick(spirit) {
