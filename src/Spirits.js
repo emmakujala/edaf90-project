@@ -37,14 +37,14 @@ export default function Spirits() {
         {cocktails ? (
           <section id="spirits" className="block spirits-block">
             <Container fluid>
-              <Row className="spiritsList">
+              <Row className="spiritsList" style = {{maxWidth: '800px', margin: '0 auto'}}>
                 {cocktails.map((cocktail) => {
                   return (
                     
                     <Col sm={4} key={cocktail.idDrink}>
                       <div className="spirits-wrapper" >
-                          <Image src={cocktail.strDrinkThumb} width={200} height={200} />
-                          <div className="label text-center" >
+                          <Image src={cocktail.strDrinkThumb} width={200} height={200} className = 'rounded' />
+                          <div className="label text-center" style = {{padding: '10px'}} >
                             <p>{cocktail.strDrink}</p>
                           </div>
                       </div>

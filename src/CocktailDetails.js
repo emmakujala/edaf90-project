@@ -17,14 +17,15 @@ export default function CocktailDetails() {
     }
 
     async function fetchCocktailDetails() {
-      try {
-        const response = await fetch(url + state.selectedCocktail);
-        const data = await response.json();
-        setCocktailDetails(data.drinks[0]);
-      } catch (error) {
-        console.error(error);
+        try {
+          const response = await fetch(url + state.selectedCocktail);
+          const data = await response.json();
+          setCocktailDetails(data.drinks[0]);
+        } catch (error) {
+          return <span>No data available for the selected cocktail.</span>;
+  
+        }
 
-      }
     }
 
     fetchCocktailDetails();
