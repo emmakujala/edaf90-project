@@ -4,20 +4,16 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
-import { Link, Outlet, useNavigate, Route, Routes } from "react-router-dom";
-import Pagination from 'react-bootstrap/Pagination';
+import { Outlet, Route, Routes } from "react-router-dom";
 import { useCocktailContext } from './CocktailProvider';
-import SpiritButtons from './SpiritButtons';
-import { Button } from 'react-bootstrap';
 import CocktailDetails from './CocktailDetails';
 
 export default function Spirits() {
 
     
     const [cocktails, setCocktails] = useState([]);
-    const { state, dispatch } = useCocktailContext();
+    const { state } = useCocktailContext();
     const url = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${state.spiritCategory}`;
-    const navigate = useNavigate();
 
     useEffect(() => {
           async function fetchCocktails() {
@@ -34,7 +30,7 @@ export default function Spirits() {
           }
           fetchCocktails();
         
-    },  [state])
+    },[state])
      
 
 
@@ -43,14 +39,14 @@ export default function Spirits() {
         {cocktails ? (
           <section id="spirits" className="block spirits-block">
             <Container fluid>
-              <Row className="spiritsList">
+              <Row className="spiritsList" style = {{maxWidth: '800px', margin: '0 auto'}}>
                 {cocktails.map((cocktail) => {
                   return (
                     
                     <Col sm={4} key={cocktail.idDrink}>
                       <div className="spirits-wrapper" >
-                          <Image src={cocktail.strDrinkThumb} width={200} height={200} />
-                          <div className="label text-center" >
+                          <Image src={cocktail.strDrinkThumb} width={200} height={200} className = 'rounded' />
+                          <div className="label text-center" style = {{padding: '10px'}} >
                             <p>{cocktail.strDrink}</p>
                           </div>
                       </div>
