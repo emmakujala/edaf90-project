@@ -8,7 +8,7 @@ import Footer from './Footer'
 function App() {
   return (
     <Container className="App">
-          <Image src="/bananacocktail (kopia).jpeg" fluid />
+          <Image src="/bananacocktailwide.jpeg" fluid />
           <Outlet/>
       <Footer/>
     </Container>
