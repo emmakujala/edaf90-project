@@ -12,13 +12,15 @@ export default function Spirits() {
     
     const [cocktails, setCocktails] = useState([]);
     const { state } = useCocktailContext();
-    const url = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${state.spiritCategory}`;
+    const url = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=';
     
 
     useEffect(() => {
           async function fetchCocktails() {
             try {
-              const response = await fetch(url);
+              const response = await fetch(url + state.spiritCategory, {
+                method: 'POST'
+              });
               const data = await response.json();
               setCocktails(data.drinks);
             } catch (error) {
@@ -28,7 +30,7 @@ export default function Spirits() {
           }
           fetchCocktails();
         
-    })
+    }, [state])
      
 
 

@@ -24,7 +24,9 @@
           try {
             let allCocktails = [];
             for (let letter of alphabet) {
-                const response = await fetch(url + letter);
+                const response = await fetch(url + letter, {
+                  method: 'POST'
+                });
                 const result = await response.json();
                 console.log(result);
                 if (result.drinks) {
@@ -37,7 +39,7 @@
             window.localStorage.setItem('cocktailNames', JSON.stringify(cocktailNames));
 
           } catch (error) {
-              console.error(error);
+              //console.log(error);
           }
         }
     }

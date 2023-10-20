@@ -12,7 +12,9 @@ export default function RandomCocktail() {
 
     async function fetchCocktailDetails() {
         try {
-          const response = await fetch(url);
+          const response = await fetch(url, {
+            method: 'POST'
+          });
           const data = await response.json();
           dispatch({type: 'SET_SELECTED_COCKTAIL', payload: data.drinks[0].strDrink})
           navigate('/random/details')
@@ -22,7 +24,7 @@ export default function RandomCocktail() {
           console.error(error);
            
         }
-      }
+    }
 
     useEffect (() => {
         fetchCocktailDetails();

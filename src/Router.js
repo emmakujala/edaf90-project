@@ -64,7 +64,8 @@ const router = createBrowserRouter([
                             ]
                         }, 
                         {
-                            path: '*'
+                            path: '*',
+                            element: <h3 style = {{padding: '24px'}}>Pick a menu option!</h3>
                         }
                     ]
                 },

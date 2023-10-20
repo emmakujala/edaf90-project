@@ -9,9 +9,7 @@ function App() {
   return (
     <Container className="App">
           <Image src="/bananacocktail (kopia).jpeg" fluid />
-          <div style = {{padding: '14px', position: 'relative'}}/>
-          <Outlet></Outlet>
-          <div style = {{padding: '14px', position: 'relative', marginBottom: '44px'}}/>
+          <Outlet/>
       <Footer/>
     </Container>
   )

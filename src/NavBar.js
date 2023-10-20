@@ -8,7 +8,8 @@ function NavBar() {
 
     return (
     <div>
-    <Navbar expand="lg" bg="dark" className="bg-body-tertiary mx-auto text-center" data-bs-theme="dark" style={{ maxWidth: '1000px' }}>      <Container>
+    <Navbar expand="lg" bg="dark" className="bg-body-tertiary mx-auto text-center" data-bs-theme="dark" style={{ maxWidth: '1000px', marginBottom: '24px' }}>      
+    <Container>
       <Navbar.Brand href="/">KAREN'S COCKTAIL BAR</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
