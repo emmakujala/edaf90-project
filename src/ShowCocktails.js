@@ -1,6 +1,5 @@
 import { Outlet, useNavigate, Route, Routes } from "react-router-dom";
 import { useCocktailContext } from './CocktailProvider';
-import CocktailDetails from "./CocktailDetails";
 
 export default function ShowCocktails() {
     const { state, dispatch } = useCocktailContext();
@@ -25,9 +24,6 @@ export default function ShowCocktails() {
             
             )}
             </select>
-            <Routes>
-            <Route path="details" element={<CocktailDetails />} />
-            </Routes>
             <Outlet />
         </div>
     )

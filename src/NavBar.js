@@ -1,11 +1,13 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { Outlet } from 'react-router-dom';
 
 
 function NavBar() {
 
     return (
+    <div>
     <Navbar expand="lg" bg="dark" className="bg-body-tertiary mx-auto text-center" data-bs-theme="dark" style={{ maxWidth: '1000px' }}>      <Container>
       <Navbar.Brand href="/">KAREN'S COCKTAIL BAR</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -19,9 +21,8 @@ function NavBar() {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+    <Outlet></Outlet>
+    </div>
     )
-
-  
-
 }
 export default NavBar;

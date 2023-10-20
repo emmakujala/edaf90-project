@@ -5,7 +5,7 @@ import { useCocktailContext } from './CocktailProvider';
 export default function CocktailDetails() {
 
 
-  const url = 'http://www.thecocktaildb.com/api/json/v1/1/search.php?s='
+  const url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s='
   const [cocktailDetails, setCocktailDetails] = useState(null);
   const { state } = useCocktailContext();
 

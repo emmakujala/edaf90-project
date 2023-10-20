@@ -31,11 +31,7 @@ export default function SearchBar()  {
  
             <Button className="btn btn-warning text-white" variant="secondary" type="submit" >Search
             </Button>
-  
         </Form>
-        <Routes>
-            <Route path="details" element={<CocktailDetails />} />
-        </Routes>
         <Outlet />
         </div>
     )

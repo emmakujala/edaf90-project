@@ -1,13 +1,12 @@
 import { Button } from "react-bootstrap";
 import { useCocktailContext } from "./CocktailProvider"
 import { useEffect } from "react";
-import { Route, Outlet, Routes, useNavigate } from "react-router-dom";
-import CocktailDetails from "./CocktailDetails";
+import { Outlet,useNavigate } from "react-router-dom";
 
 export default function RandomCocktail() {
 
     const {dispatch} = useCocktailContext();
-    const url = 'http://www.thecocktaildb.com/api/json/v1/1/random.php';
+    const url = 'https://www.thecocktaildb.com/api/json/v1/1/random.php';
     const navigate = useNavigate();
 
 
@@ -40,11 +39,7 @@ export default function RandomCocktail() {
 
         <div>
         <Button className="btn btn-warning text-white" onClick={handleClick}>Randomise new cocktail</Button>
-        <Routes>
-            <Route path="details" element={<CocktailDetails />} />
-            </Routes>
         <Outlet />
-
         </div>
 
     )

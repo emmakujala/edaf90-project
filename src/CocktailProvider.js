@@ -2,7 +2,7 @@
 
   
   const alphabet = 'abcdefghijklmnopqrstuvwxyz'
-  const url = 'http://www.thecocktaildb.com/api/json/v1/1/search.php?f=';
+  const url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?f=';
 
     const cocktailReducer = (state, action) => {
       switch (action.type) {
