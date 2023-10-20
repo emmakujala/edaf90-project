@@ -1,4 +1,4 @@
-import { Outlet, useNavigate, Route, Routes } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import { useCocktailContext } from './CocktailProvider';
 
 export default function ShowCocktails() {

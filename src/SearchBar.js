@@ -1,8 +1,7 @@
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import { useCocktailContext } from './CocktailProvider'
-import { Outlet, useNavigate , Route, Routes} from 'react-router-dom';
-import CocktailDetails from './CocktailDetails';
+import { Outlet, useNavigate } from 'react-router-dom';
 
 export default function SearchBar()  {
 

@@ -57,9 +57,9 @@ export default function CocktailDetails() {
       <h3>Ingredients:</h3>
       <div className='list-group'>
         {ingredients.map((item, index) => (
-          <a key={index}>
+          <p key={index}>
             {item.ingredient}: {item.measurement}
-          </a>
+          </p>
         ))}
       </div>
       <h3 style={{ marginTop: '14px' }} >Instructions:</h3>

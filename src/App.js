@@ -1,14 +1,9 @@
 import './App.css';
-import ShowCocktails from './ShowCocktails'
 import 'bootstrap/dist/css/bootstrap.css';
 import Container from 'react-bootstrap/Container'
 import Image from 'react-bootstrap/Image'
-import NavBar from './NavBar'
-import { Routes, Route, Outlet } from 'react-router-dom';
-import SearchBar from './SearchBar';
-import Footer from './Footer'
-import SpiritButtons from './SpiritButtons';
-import RandomCocktail from './Random';
+import { Outlet } from 'react-router-dom';
+import Footer from './Footer' 
 
 function App() {
   return (
