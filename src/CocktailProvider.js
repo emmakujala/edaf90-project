@@ -39,7 +39,6 @@
             window.localStorage.setItem('cocktailNames', JSON.stringify(cocktailNames));
 
           } catch (error) {
-              console.log("test");
               console.log(error);
           }
         }

@@ -17,16 +17,19 @@ export default function Spirits() {
 
     useEffect(() => {
           async function fetchCocktails() {
-            try {
-              const response = await fetch(url + state.spiritCategory, {
-                method: 'POST'
-              });
-              const data = await response.json();
-              setCocktails(data.drinks);
-            } catch (error) {
-              console.error(error);
-               
+            if(state.spiritCategory) {
+              try {
+                const response = await fetch(url + state.spiritCategory, {
+                  method: 'POST'
+                });
+                const data = await response.json();
+                setCocktails(data.drinks);
+              } catch (error) {
+                console.error(error);
+                 
+              }
             }
+            
           }
           fetchCocktails();
         
